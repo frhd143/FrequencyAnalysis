@@ -3,7 +3,7 @@
 
 
 
-# Uppgift 3B - Frekvensanalys
+# Frekvensanalys
 
 def frequency(file_name):
     file = open(file_name, "r")
@@ -26,8 +26,6 @@ def frequency(file_name):
 
 def most_frequent(freq_dict):
     if len(freq_dict) < 10:
-        #massage = "The dictionary most caintain at least 10 items"
-        #print(massage)
         freq_dict_copy = freq_dict.copy()
         return freq_dict_copy
     else:
@@ -46,7 +44,6 @@ def word_count(freq_dict):
     freq_dict_list = list(freq_dict.items())
     total_word = 0
     for i in freq_dict_list:
-        #print(i[1])
         total_word += i[1]
     return total_word
 
@@ -88,20 +85,14 @@ def median_frequency(freq_dict):
 
 def closest_word(freq_dict, rate):
     freq_dict_list = list(freq_dict.items())
-    #print(freq_dict_list)
     new_list = []
     for i in freq_dict_list:
         new_list.append(i[1])
-    #print(new_list)
     # Find the nearest or closest vallue in a list to a given number
     closest_value = min(new_list, key=lambda x:abs(x-rate))
-    #print(closest_value)
     for i in freq_dict_list:
         if i[1] == closest_value:
             return i[0]
-
-
-
 
 
 
