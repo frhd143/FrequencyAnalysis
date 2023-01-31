@@ -1,4 +1,3 @@
-# Labration 3 
 # Skriven av Farhad Asadi, 11 oktober 2021
 
 
